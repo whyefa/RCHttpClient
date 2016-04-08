@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03R-gh-nyf">
+                                <rect key="frame" x="30" y="100" width="540" height="40"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpb-TI-hcE">
+                                        <rect key="frame" x="5" y="10" width="412" height="20"/>
+                                        <color key="progressTintColor" red="0.1606969214" green="0.67594290079999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frc-nN-x5C">
+                                        <rect key="frame" x="427" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="GMi-9n-OI5"/>
+                                        </constraints>
+                                        <state key="normal" title="开始"/>
+                                        <connections>
+                                            <action selector="f1Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJ7-bK-qgD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-jM-XgC">
+                                        <rect key="frame" x="485" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="MZK-aF-sP9"/>
+                                        </constraints>
+                                        <state key="normal" title="暂停"/>
+                                        <connections>
+                                            <action selector="f1Pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d35-Rg-72N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Zj6-jM-XgC" firstAttribute="leading" secondItem="frc-nN-x5C" secondAttribute="trailing" constant="8" id="0ys-E9-nan"/>
+                                    <constraint firstItem="Gpb-TI-hcE" firstAttribute="top" secondItem="03R-gh-nyf" secondAttribute="top" constant="10" id="5ed-TW-nYf"/>
+                                    <constraint firstItem="frc-nN-x5C" firstAttribute="top" secondItem="03R-gh-nyf" secondAttribute="top" id="5wn-Jl-zAE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zj6-jM-XgC" secondAttribute="trailing" constant="5" id="6ix-yV-df9"/>
+                                    <constraint firstItem="frc-nN-x5C" firstAttribute="leading" secondItem="Gpb-TI-hcE" secondAttribute="trailing" constant="10" id="B6t-pr-IW9"/>
+                                    <constraint firstItem="Zj6-jM-XgC" firstAttribute="top" secondItem="03R-gh-nyf" secondAttribute="top" id="FvW-HH-BA1"/>
+                                    <constraint firstItem="Gpb-TI-hcE" firstAttribute="leading" secondItem="03R-gh-nyf" secondAttribute="leading" constant="5" id="GzJ-BU-wGz"/>
+                                    <constraint firstAttribute="bottom" secondItem="frc-nN-x5C" secondAttribute="bottom" id="Il3-5L-izv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gpb-TI-hcE" secondAttribute="bottom" constant="10" id="Zjf-CW-rEW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zj6-jM-XgC" secondAttribute="bottom" id="ne5-ZC-7Zu"/>
+                                    <constraint firstAttribute="height" constant="40" id="vRh-ln-WhC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVG-gP-vDM">
+                                <rect key="frame" x="30" y="160" width="540" height="40"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5y3-0u-nGJ">
+                                        <rect key="frame" x="5" y="10" width="412" height="20"/>
+                                        <color key="progressTintColor" red="0.1606969214" green="0.67594290079999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-8K-BTj">
+                                        <rect key="frame" x="427" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="TqF-cI-U57"/>
+                                        </constraints>
+                                        <state key="normal" title="开始"/>
+                                        <connections>
+                                            <action selector="f2Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRx-mn-l2T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paJ-2m-xER">
+                                        <rect key="frame" x="485" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="wLy-UV-fdu"/>
+                                        </constraints>
+                                        <state key="normal" title="暂停"/>
+                                        <connections>
+                                            <action selector="f2Pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mju-ew-Mwr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="paJ-2m-xER" firstAttribute="leading" secondItem="MYK-8K-BTj" secondAttribute="trailing" constant="8" id="10x-Z3-iGV"/>
+                                    <constraint firstItem="MYK-8K-BTj" firstAttribute="leading" secondItem="5y3-0u-nGJ" secondAttribute="trailing" constant="10" id="3P5-0o-UJd"/>
+                                    <constraint firstAttribute="height" constant="40" id="94W-PN-QKE"/>
+                                    <constraint firstItem="5y3-0u-nGJ" firstAttribute="top" secondItem="aVG-gP-vDM" secondAttribute="top" constant="10" id="En1-f3-w3D"/>
+                                    <constraint firstAttribute="bottom" secondItem="paJ-2m-xER" secondAttribute="bottom" id="JNh-fJ-dOh"/>
+                                    <constraint firstItem="MYK-8K-BTj" firstAttribute="leading" secondItem="5y3-0u-nGJ" secondAttribute="trailing" constant="10" id="PAM-0Z-3LV"/>
+                                    <constraint firstItem="paJ-2m-xER" firstAttribute="top" secondItem="aVG-gP-vDM" secondAttribute="top" id="PfE-Kh-qMr"/>
+                                    <constraint firstAttribute="bottom" secondItem="MYK-8K-BTj" secondAttribute="bottom" id="R65-do-TkU"/>
+                                    <constraint firstAttribute="bottom" secondItem="5y3-0u-nGJ" secondAttribute="bottom" constant="10" id="RWr-60-PE8"/>
+                                    <constraint firstItem="paJ-2m-xER" firstAttribute="leading" secondItem="MYK-8K-BTj" secondAttribute="trailing" constant="8" id="Raa-TI-j7y"/>
+                                    <constraint firstAttribute="trailing" secondItem="paJ-2m-xER" secondAttribute="trailing" constant="5" id="ptr-ul-ai3"/>
+                                    <constraint firstItem="5y3-0u-nGJ" firstAttribute="leading" secondItem="aVG-gP-vDM" secondAttribute="leading" constant="5" id="uVO-Rz-izb"/>
+                                    <constraint firstItem="MYK-8K-BTj" firstAttribute="top" secondItem="aVG-gP-vDM" secondAttribute="top" id="xHd-EF-6MQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="03R-gh-nyf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="76V-qL-FPi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="03R-gh-nyf" secondAttribute="trailing" constant="10" id="JSm-Jm-IiB"/>
+                            <constraint firstItem="aVG-gP-vDM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="aHJ-Tu-xvW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aVG-gP-vDM" secondAttribute="trailing" constant="10" id="aX2-x0-2G3"/>
+                            <constraint firstItem="aVG-gP-vDM" firstAttribute="top" secondItem="03R-gh-nyf" secondAttribute="bottom" constant="20" id="igN-NV-kyi"/>
+                            <constraint firstItem="03R-gh-nyf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="npK-Iq-hLS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="f1Progress" destination="Gpb-TI-hcE" id="ozZ-lU-pbM"/>
+                        <outlet property="f2Progress" destination="5y3-0u-nGJ" id="Vai-WC-ETh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="269"/>
+        </scene>
+    </scenes>
+</document>
