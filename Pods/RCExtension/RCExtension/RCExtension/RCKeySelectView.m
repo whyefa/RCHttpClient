@@ -69,7 +69,7 @@
 }
 
 
-- (void)showListViewFromBottomWithArray:(NSArray *)array title:(NSString *)title {
+- (void)showListViewIn:(UIView *)superView WithArray:(NSArray *)array title:(NSString *)title {
     //计算listView 高度
     if(array.count <= 5){
         _viewHeight = 6* 40;
@@ -82,7 +82,7 @@
     [_array addObjectsFromArray:array];
     [_listView reloadData];
     _listView.frame  = CGRectMake(0, 40, SCREEN_WIDTH, _viewHeight-40);
-    [[[UIApplication sharedApplication].delegate window] addSubview:self];
+    [superView addSubview:self];
     _tableHeader.text = title;
     [UIView animateWithDuration:0.3 delay:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _contentView.frame = CGRectMake(0, SCREEN_HEIGHT-_viewHeight, SCREEN_WIDTH, _viewHeight);

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4A4559A84D7E828DF1467D87'
+               BlueprintIdentifier = 'B3CAFE367A60F144E2AA1874'
                BlueprintName = 'RCExtension'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libRCExtension.a'>

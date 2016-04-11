@@ -100,7 +100,7 @@ typedef void(^CurrentStatus)(NSInteger currentStatus);
 /**
  *  AFURLSession 上传
  *
- *  @param address     服务器地址
+ *  @param address    服务器地址
  *  @param fileData   上传的文件的信息
  *  @param upProgress 上传进度
  *  @param completion 完成后回调
@@ -110,8 +110,7 @@ typedef void(^CurrentStatus)(NSInteger currentStatus);
                  progress:(nullable RCProgress)upProgress
                completion:(nonnull RCSessionCompletion)completion;
 
+
 + (void)getCurrentNetworkStatus:(CurrentStatus _Nonnull)currentStatus;
-
-
 
 @end

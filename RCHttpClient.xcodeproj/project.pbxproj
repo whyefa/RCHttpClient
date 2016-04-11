@@ -15,8 +15,12 @@
 		8B1C755A1CB3C29200894C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C75591CB3C29200894C06 /* Assets.xcassets */; };
 		8B1C755D1CB3C29200894C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C755B1CB3C29200894C06 /* LaunchScreen.storyboard */; };
 		8B1C75661CB3C2A500894C06 /* RCHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C75651CB3C2A500894C06 /* RCHttpClient.m */; };
-		8B895F0E1CB75F5200982F69 /* Jar.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8B895F0D1CB75F5200982F69 /* Jar.zip */; };
 		8B895F111CB7841E00982F69 /* RCDownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B895F101CB7841E00982F69 /* RCDownloadTool.m */; };
+		8BBC37DF1CBB705E00FA06CC /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC37DE1CBB705E00FA06CC /* TestViewController.m */; };
+		8BE7F1D11CBBA94100CDB71E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7F1D01CBBA94100CDB71E /* Security.framework */; };
+		8BE7F1D31CBBA96500CDB71E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7F1D21CBBA96500CDB71E /* SystemConfiguration.framework */; };
+		8BE7F1D51CBBA96C00CDB71E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7F1D41CBBA96C00CDB71E /* MobileCoreServices.framework */; };
+		8BE7F1D71CBBA97400CDB71E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7F1D61CBBA97400CDB71E /* CoreGraphics.framework */; };
 		AE1717C66D2FB00BCFE1E302 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B84DCC3D89C31A2821333166 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +39,14 @@
 		8B1C755E1CB3C29200894C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1C75641CB3C2A500894C06 /* RCHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHttpClient.h; sourceTree = "<group>"; };
 		8B1C75651CB3C2A500894C06 /* RCHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHttpClient.m; sourceTree = "<group>"; };
-		8B895F0D1CB75F5200982F69 /* Jar.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Jar.zip; sourceTree = "<group>"; };
 		8B895F0F1CB7841E00982F69 /* RCDownloadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDownloadTool.h; sourceTree = "<group>"; };
 		8B895F101CB7841E00982F69 /* RCDownloadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDownloadTool.m; sourceTree = "<group>"; };
+		8BBC37DD1CBB705E00FA06CC /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		8BBC37DE1CBB705E00FA06CC /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		8BE7F1D01CBBA94100CDB71E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8BE7F1D21CBBA96500CDB71E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8BE7F1D41CBBA96C00CDB71E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8BE7F1D61CBBA97400CDB71E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B84DCC3D89C31A2821333166 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB52BBDBB5B835365A0CBEA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE7F1D71CBBA97400CDB71E /* CoreGraphics.framework in Frameworks */,
+				8BE7F1D51CBBA96C00CDB71E /* MobileCoreServices.framework in Frameworks */,
+				8BE7F1D31CBBA96500CDB71E /* SystemConfiguration.framework in Frameworks */,
+				8BE7F1D11CBBA94100CDB71E /* Security.framework in Frameworks */,
 				AE1717C66D2FB00BCFE1E302 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +70,10 @@
 		232758A7950802FAA19189F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BE7F1D61CBBA97400CDB71E /* CoreGraphics.framework */,
+				8BE7F1D41CBBA96C00CDB71E /* MobileCoreServices.framework */,
+				8BE7F1D21CBBA96500CDB71E /* SystemConfiguration.framework */,
+				8BE7F1D01CBBA94100CDB71E /* Security.framework */,
 				B84DCC3D89C31A2821333166 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -92,21 +109,22 @@
 		8B1C754C1CB3C29200894C06 /* RCHttpClient */ = {
 			isa = PBXGroup;
 			children = (
+				8B1C75531CB3C29200894C06 /* ViewController.h */,
+				8B1C75541CB3C29200894C06 /* ViewController.m */,
+				8BBC37DD1CBB705E00FA06CC /* TestViewController.h */,
+				8BBC37DE1CBB705E00FA06CC /* TestViewController.m */,
+				8B895F0F1CB7841E00982F69 /* RCDownloadTool.h */,
+				8B895F101CB7841E00982F69 /* RCDownloadTool.m */,
+				8B1C75641CB3C2A500894C06 /* RCHttpClient.h */,
+				8B1C75651CB3C2A500894C06 /* RCHttpClient.m */,
 				8B0BAC2D1CB650DB00512567 /* 123.png */,
 				8B1C75501CB3C29200894C06 /* AppDelegate.h */,
 				8B1C75511CB3C29200894C06 /* AppDelegate.m */,
-				8B895F0D1CB75F5200982F69 /* Jar.zip */,
 				8B1C75591CB3C29200894C06 /* Assets.xcassets */,
 				8B1C755E1CB3C29200894C06 /* Info.plist */,
 				8B1C755B1CB3C29200894C06 /* LaunchScreen.storyboard */,
 				8B1C75561CB3C29200894C06 /* Main.storyboard */,
-				8B1C75641CB3C2A500894C06 /* RCHttpClient.h */,
-				8B1C75651CB3C2A500894C06 /* RCHttpClient.m */,
 				8B1C754D1CB3C29200894C06 /* Supporting Files */,
-				8B1C75531CB3C29200894C06 /* ViewController.h */,
-				8B1C75541CB3C29200894C06 /* ViewController.m */,
-				8B895F0F1CB7841E00982F69 /* RCDownloadTool.h */,
-				8B895F101CB7841E00982F69 /* RCDownloadTool.m */,
 			);
 			path = RCHttpClient;
 			sourceTree = "<group>";
@@ -182,7 +200,6 @@
 				8B0BAC2E1CB650DB00512567 /* 123.png in Resources */,
 				8B1C755D1CB3C29200894C06 /* LaunchScreen.storyboard in Resources */,
 				8B1C755A1CB3C29200894C06 /* Assets.xcassets in Resources */,
-				8B895F0E1CB75F5200982F69 /* Jar.zip in Resources */,
 				8B1C75581CB3C29200894C06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BBC37DF1CBB705E00FA06CC /* TestViewController.m in Sources */,
 				8B1C75551CB3C29200894C06 /* ViewController.m in Sources */,
 				8B1C75661CB3C2A500894C06 /* RCHttpClient.m in Sources */,
 				8B1C75521CB3C29200894C06 /* AppDelegate.m in Sources */,
@@ -375,6 +393,7 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
+					"-all_load",
 					"-w",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCHttpClient;
@@ -403,6 +422,7 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
+					"-all_load",
 					"-w",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCHttpClient;

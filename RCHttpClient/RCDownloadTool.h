@@ -48,7 +48,6 @@ typedef void (^RCDownloadCompletion)(NSURLResponse * _Nonnull response, NSURL * 
  */
 - (void)pauseTask:(nonnull NSString *)fileUrl;
 
-
 /**
  *  继续下载任务
  *

@@ -16,8 +16,8 @@
 
 @end
 
-NSString *file1 = @"http://music.baidutt.com/up/kwcywuwy/ydsspc.mp3";
-NSString *file2 = @"http://music.baidutt.com/up/kwcywuwm/usdkpw.mp3";
+static NSString *file1 = @"http://music.baidutt.com/up/kwcywuwy/ydsspc.mp3";
+static NSString *file2 = @"http://music.baidutt.com/up/kwcywuwm/usdkpw.mp3";
 
 
 @implementation ViewController
@@ -39,7 +39,7 @@ NSString *file2 = @"http://music.baidutt.com/up/kwcywuwm/usdkpw.mp3";
 #pragma mark- 下载
 
 - (IBAction)f1Start:(id)sender {
-    [_downloadTool downLoadFromServer:file1 fileName:@"file1.mp3" progress:^(float progress) {
+    [_downloadTool downLoadFromServer:file1 fileName:@"file1" progress:^(float progress) {
         dispatch_async(dispatch_get_main_queue(), ^{
             _f1Progress.progress = progress;
             NSLog(@"f1进度: %f", progress);

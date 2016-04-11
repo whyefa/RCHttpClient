@@ -10,7 +10,6 @@
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
 #import "AFURLSessionManager.h"
-
 #import "NSString+Helper.h"
 
 @interface RCHttpClient ()

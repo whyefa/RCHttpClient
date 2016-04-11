@@ -17,8 +17,6 @@
 #    define DLog(...)
 #endif
 
-#define SHARED_APP ((AppDelegate *)[UIApplication sharedApplication].delegate)
-
 /*******  Plist 单例  ********/
 #define Plist_Handler  [NSUserDefaults standardUserDefaults]
 

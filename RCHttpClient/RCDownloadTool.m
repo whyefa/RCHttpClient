@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray * _Nonnull taskQueue;
 
+@property (nonatomic, strong) AFURLSessionManager *manager;
+
 @end
 
 @implementation RCDownloadTool
@@ -21,6 +23,8 @@
 - (id)init {
     if (self = [super init]) {
         _taskQueue = [NSMutableArray arrayWithCapacity:0];
+        NSURLSessionConfiguration *defaultConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _manager = [[AFURLSessionManager alloc]initWithSessionConfiguration:defaultConfig];
     }
     return self;
 }
@@ -30,7 +34,6 @@
         NSString *file = taskInfo[@"fileName"];
         if ([fileName isEqualToString:file]) {
             NSURLSessionDownloadTask *task = taskInfo[@"task"];
-            __block NSURLSessionDownloadTask *weakTask = task;
             [task cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
                 NSFileManager *fileManager = [NSFileManager defaultManager];
                 NSError *error = nil;
@@ -48,22 +51,20 @@
 - (void)resumeTask:(NSString *)fileName
           progress:(RCDownloadProgress)progress
         Completion:(RCDownloadCompletion)completion {
-
     for (NSDictionary * taskInfo in _taskQueue) {
         NSString *file = taskInfo[@"fileName"];
         if ([fileName isEqualToString:file]) {
-            NSURLSessionConfiguration *defaultConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-            AFURLSessionManager *manager = [[AFURLSessionManager alloc]initWithSessionConfiguration:defaultConfig];
             NSString *downloadPath = [self cachePathWithFile:fileName];
             NSData *resumeData = [NSData dataWithContentsOfFile:downloadPath];
             if (resumeData.length == 0) {
                 resumeData = [NSData data];
             }
                 //下载任务
-            NSURLSessionDownloadTask *resumeTask = [manager downloadTaskWithResumeData:resumeData  progress:^(NSProgress * _Nonnull downloadProgress) {
+            NSURLSessionDownloadTask *resumeTask = [_manager downloadTaskWithResumeData:resumeData  progress:^(NSProgress * _Nonnull downloadProgress) {
                 progress(1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
             } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-                return [NSURL URLWithString:downloadPath];
+                NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+                return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
             } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
                 completion(response, filePath, error); //下载完成调用的方法
             }];
@@ -71,16 +72,21 @@
             [dic setObject:resumeTask forKey:@"task"];
             [_taskQueue replaceObjectAtIndex:[_taskQueue indexOfObject:taskInfo] withObject:[dic copy]];
             [resumeTask resume];
+            return;
         }
     }
 }
 
 - (void)downLoadFromServer:(NSString *)fileUrl fileName:(NSString *)fileName progress:(RCDownloadProgress _Nullable)downProgress completionHandler:(RCDownloadCompletion _Nonnull)completion {
     for (NSDictionary *taskInfo in _taskQueue) {
-        NSString *fileName = taskInfo[@"fileName"];
-        if ([fileName isEqualToString:fileName]) {
+        NSString *file = taskInfo[@"fileName"];
+        if ([file isEqualToString:fileName]) {
             NSURLSessionDownloadTask *task = taskInfo[@"task"];
-            if (task.state != NSURLSessionTaskStateRunning) {
+            if (task.state == NSURLSessionTaskStateCompleted) {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error!" message:@"Task Has completed" delegate:nil cancelButtonTitle:@"朕知道了" otherButtonTitles: nil];
+                [alert show];
+            }
+            else if (task.state != NSURLSessionTaskStateRunning) {
                 [self resumeTask:fileName progress:^(float progress) {
                     downProgress(progress);
                 } Completion:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
@@ -91,19 +97,15 @@
             return;
         }
     }
-    NSURLSessionConfiguration *defaultConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc]initWithSessionConfiguration:defaultConfig];
     NSURL *url = [NSURL URLWithString:fileUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSString *downDirectory = [NSString stringWithFormat:@"%@/Documents/",NSHomeDirectory()];
-    NSString *downloadPath = [downDirectory stringByAppendingPathComponent:fileName];
-    NSLog(@"地址:%@",downloadPath);
-    NSURLSessionDownloadTask * task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSURLSessionDownloadTask * task = [_manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         if (downProgress) {
             downProgress(1.0 *downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
         }
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return [NSURL URLWithString:downloadPath];
+        NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         completion(response, filePath, error); //下载完成调用的方法
     }];

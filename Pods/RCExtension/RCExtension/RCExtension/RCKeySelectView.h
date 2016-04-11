@@ -21,6 +21,6 @@
 @property (weak, nonatomic)   id<KeySelectDelegate>delegate;
 @property (nonatomic, copy)   NSString *key;
 
-- (void)showListViewFromBottomWithArray:(NSArray *)array title:(NSString *)title;
+- (void)showListViewIn:(UIView *)superView WithArray:(NSArray *)array title:(NSString *)title;
 
 @end
