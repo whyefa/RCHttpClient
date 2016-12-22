@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lz5-iL-8Qj">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lz5-iL-8Qj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,17 +19,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03R-gh-nyf">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03R-gh-nyf">
                                 <rect key="frame" x="30" y="100" width="540" height="40"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpb-TI-hcE">
                                         <rect key="frame" x="5" y="10" width="412" height="20"/>
-                                        <color key="progressTintColor" red="0.1606969214" green="0.67594290079999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="progressTintColor" red="0.1606969214" green="0.67594290079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frc-nN-x5C">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frc-nN-x5C">
                                         <rect key="frame" x="427" y="0.0" width="50" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="GMi-9n-OI5"/>
@@ -35,7 +39,7 @@
                                             <action selector="f1Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJ7-bK-qgD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-jM-XgC">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-jM-XgC">
                                         <rect key="frame" x="485" y="0.0" width="50" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="MZK-aF-sP9"/>
@@ -46,7 +50,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Zj6-jM-XgC" firstAttribute="leading" secondItem="frc-nN-x5C" secondAttribute="trailing" constant="8" id="0ys-E9-nan"/>
                                     <constraint firstItem="Gpb-TI-hcE" firstAttribute="top" secondItem="03R-gh-nyf" secondAttribute="top" constant="10" id="5ed-TW-nYf"/>
@@ -61,14 +65,14 @@
                                     <constraint firstAttribute="height" constant="40" id="vRh-ln-WhC"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVG-gP-vDM">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVG-gP-vDM">
                                 <rect key="frame" x="30" y="160" width="540" height="40"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5y3-0u-nGJ">
                                         <rect key="frame" x="5" y="10" width="412" height="20"/>
-                                        <color key="progressTintColor" red="0.1606969214" green="0.67594290079999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="progressTintColor" red="0.1606969214" green="0.67594290079999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-8K-BTj">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-8K-BTj">
                                         <rect key="frame" x="427" y="0.0" width="50" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="TqF-cI-U57"/>
@@ -78,7 +82,7 @@
                                             <action selector="f2Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRx-mn-l2T"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paJ-2m-xER">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paJ-2m-xER">
                                         <rect key="frame" x="485" y="0.0" width="50" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="wLy-UV-fdu"/>
@@ -89,7 +93,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="paJ-2m-xER" firstAttribute="leading" secondItem="MYK-8K-BTj" secondAttribute="trailing" constant="8" id="10x-Z3-iGV"/>
                                     <constraint firstItem="MYK-8K-BTj" firstAttribute="leading" secondItem="5y3-0u-nGJ" secondAttribute="trailing" constant="10" id="3P5-0o-UJd"/>
@@ -107,7 +111,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="03R-gh-nyf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="76V-qL-FPi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="03R-gh-nyf" secondAttribute="trailing" constant="10" id="JSm-Jm-IiB"/>
@@ -136,9 +140,9 @@
                         <viewControllerLayoutGuide type="bottom" id="TLA-rq-1gD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7Ce-vj-fkm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="guF-y6-KBj"/>
                 </viewController>
@@ -153,7 +157,7 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="iSC-qm-Atv">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1ev-LL-FGk"/>
@@ -162,7 +166,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3v-L8-EII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="348" y="246"/>
+            <point key="canvasLocation" x="7" y="239"/>
         </scene>
     </scenes>
 </document>
